@@ -1,4 +1,18 @@
 # -*- coding: utf-8 -*-
+import streamlit as st
+st.write('Installing scikit-learn...')  # Menampilkan pesan ke pengguna
+st.write('Please wait...')
+
+# Menginstall scikit-learn secara internal
+with st.spinner('Installing scikit-learn...'):
+  import pip
+  def install(package):
+    if hasattr(pip, 'main'):
+      pip.main(['install', package])
+    else:
+      pip._internal.main(['install', package])
+  install('scikit-learn==1.3.0')
+st.success('scikit-learn installed successfully!')
 
 import streamlit as st
 import pandas as pd
