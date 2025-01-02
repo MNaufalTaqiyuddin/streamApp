@@ -13,8 +13,6 @@ with st.spinner('Installing scikit-learn...'):
       pip._internal.main(['install', package])
   install('scikit-learn==1.3.0')
 st.success('scikit-learn installed successfully!')
-
-import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
